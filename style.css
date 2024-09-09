@@ -16,7 +16,6 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
-  /* Hides the scrollbar */
 }
 
 .banner {
@@ -46,14 +45,17 @@ header {
   background-color: rgb(30, 30, 29);
   width: 100%;
 }
-
+.navbar img{
+  margin-left: 20px;
+}
 .navbar ul {
   display: flex;
   width: 100vw;
-  justify-content: space-evenly;
+  justify-content:center;
+  align-items: end;
   flex-wrap: wrap;
   list-style-type: none;
-  padding: 0;
+  padding-right: 150px;
   margin: 0;
 }
 .navbar li{
@@ -61,23 +63,23 @@ header {
 }
 .navbar {
   display: flex;
-  align-items: center;
   width: 100%;
 }
 
 li a {
   color: whitesmoke;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 25px;
 }
-
-.navbar ul :hover,.navbar ul:focus {
+.navbar ul :hover,.navbar ul :focus {
   color: goldenrod;
-  transform:scale(1.2);
+  transform:scale(1.4);
+  text-decoration:1.5px underline tan;
 }
 .products a:hover,.products a:focus ,.inner-men:hover{
   transform: scale(1.2);
   width: 31vw;
+  border: 2px solid blanchedalmond;
   height:48.8vh;
   border-radius: 10px;
   background-color:darkslategrey;
@@ -163,7 +165,7 @@ a {
 }
 
 .products a {
-  border: 2px solid blanchedalmond;
+  border: 2px dashed blanchedalmond;
   margin: 20px;
   border-radius: 15px;
 }
@@ -231,11 +233,6 @@ a {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.text-center {
-  color: whitesmoke;
-  font-size: 40px;
-  text-align: center;
-}
 
 .form1 {
   margin: 0px 60px;
@@ -271,7 +268,78 @@ footer {
   font-size: larger;
   margin-top: 20px;
 }
+.aboutus{ border: 2px solid lightcyan;
+  margin: 10px;}
+.aboutus h2{
+  text-align: center;
+  font-size: 50px;
+}
 
+.aboutus h3,h4{
+  text-align: center;
+  font-size: 35px;
+  color:cadetblue
+}
+.aboutus h4{font-size: 28px;
+padding :20px ;}
+.aboutus h3{
+  color: blanchedalmond;margin-bottom: 30px;
+}
+.story{
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+}
+.whyus{
+  display: flex;
+}
+.aboutus p {
+  font-size: 25px;
+  color:aliceblue;
+  margin: 80px;
+ }
+ .first{
+  display: flex;
+  justify-content: space-around;
+}
+.first p{
+  font-size: 25px;
+}
+.img1,.img2,.img3,.img4{
+  margin-left: 50px;
+  border-radius: 20px;
+}
+.img3{
+  margin-left: 90px;
+}
+.story img{
+  margin-right: 30px;
+}
+.storyp p{
+  margin: 20px;
+}
+.storyp{
+  position: sticky; 
+  top: 0; 
+  color:white;
+  z-index: 10; 
+  padding: 50px; 
+  max-width: 60%; 
+  box-sizing: border-box; 
+}
+.img2{
+  float: right;
+}
+.whstory{
+  display: flex; 
+  flex-direction: row-reverse;
+    gap: 20px; 
+    align-items: flex-start; 
+    position: relative; 
+    padding: 10px;}
+.aboutus{
+  color: blanchedalmond;
+}
 .mens,
 .women,
 .kids {
@@ -341,7 +409,8 @@ footer {
   margin: 20px 250px;
 }
 @media  (min-width:761px) and (max-width:800px){
-  
+  .navbar img{margin-left: 0;}
+  .navbar ul{ padding-right: 0;}
   .inner-footer{
   display: flex;
   flex-direction: column;
@@ -362,6 +431,7 @@ footer {
 }
 
 @media screen and (max-width:760px) {
+  .navbar ul{ padding-right: 0;}
   .products {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -446,9 +516,7 @@ footer {
     font-size: xx-large;
   }
 
-  .text-center {
-    font-size: medium;
-  }
+
 
   .individual {
     width: auto;
