@@ -67,6 +67,7 @@ for(let i=0;i<p.length;i++){
         innercontent.textContent=imgcont
         const sm=subtract(imgcont)
         summ.textContent=sm
+        totpri.textContent=sum+1500
      })
 
      clear.addEventListener('click',function(){
