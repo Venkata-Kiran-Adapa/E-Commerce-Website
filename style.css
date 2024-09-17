@@ -50,6 +50,7 @@ header {
 }
 .navbar img{
   margin-left: 20px;
+  width:120px;
 }
 .navbar ul {
   display: flex;
@@ -104,7 +105,8 @@ li a {
   width: 31vw;
   border: 2px solid blanchedalmond;
   border-radius: 10px;
-  background-color:darkslategrey;
+  padding:25px;
+  background-color:#000000;
 }
 .bfs {
   padding-left: 8%;
@@ -143,10 +145,10 @@ li a {
   animation: colorchange  3s infinite step-start;
 }
 @keyframes colorchange{
-  25%{ color:goldenrod;}
-  50%{ color:crimson;}
-  75%{ color:mediumspringgreen}
-  100%{ color:whitesmoke;}
+  25%{ color:#EEB76B;}
+  50%{ color:#E27802;}
+  75%{ color:#790252;}
+  100%{ color:#F9FBE7;}
 }
 .welcome p:hover {
   animation: none;
@@ -172,14 +174,24 @@ li a {
   justify-items: center;
   width: 100%;
 }
+.prdpics{
+  background-color: #151515;
+  margin:15px;
+  border-radius: 20px;
+  display: flex;                          
+  align-items: center;
+  padding: 20px;  
+  justify-content: space-between;                 /*#1E201E*/
+}
 .nowrap{
   white-space: nowrap;
 }
-.products a {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
+  .products a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 15px;
+  }
 .productslayout{
   display: grid;
 }
@@ -220,21 +232,17 @@ li a {
 
 .products a p {
   text-align: center;
-  font-size: larger;
+  font-size:x-large;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: whitesmoke;
-  margin: 0;
+  margin: 20px;
 }
 
 a {
   text-decoration: none;
 }
 
-.products a {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px;
-  border-radius: 15px;
-}
+
 
 .individual,.individuall {
   margin: 30px 0px;
@@ -428,7 +436,7 @@ padding :20px ;}
   color: aliceblue;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 } 
 
@@ -615,6 +623,7 @@ padding :20px ;}
     display: grid;
     grid-template-columns: 50% 50%;
     grid-column: 1/2;
+
   }
   .wheelpng{
     display: none;
@@ -741,8 +750,4 @@ height:500px;
 .wlcm .wheelpng{
      display: none;
   }
-  .productslayout{
-    
-  }
-  
 }

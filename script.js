@@ -10,7 +10,6 @@ let clear=document.querySelector('.clear')
 let cnt=document.querySelectorAll('.prd1')
 let totpri=document.querySelector('.totalprice')
 let summ=document.querySelector('.summm')
-// console.log(cnt)
 let count=0
 let sum=0
 let arr=[]
@@ -31,24 +30,26 @@ for(let i=0;i<p.length;i++){
         productdis[count].style.display='flex'
        productdis[count].style.flexDirection='column'
        productdis[count].style.alignItems='center'
+       arr[count]=i
+    
         // image
        let imgsrc=itemarr[i].src
         const imgElement = document.querySelector(`.cartimage${count+1}`);
        imgElement.src = imgsrc;
        const innerimg =productdis[count].querySelector(`.cartimage${count+1}`);
         innerimg.src = imgsrc;
+
        // content
         let imgcont=cnt[i].textContent
         const innercontent=productdis[count].querySelector('.pr h4')
         innercontent.textContent=imgcont
         const sm=add(imgcont)
         summ.textContent=sm
-    
         totpri.textContent=sm+1500
         count++;
        
-       if(count==10){
-        alert('You can Add only 10 items in to the cart')
+       if(count==12){
+        alert('only 12 items can be added to the cart')
        } 
     })
      delcart[i].addEventListener('click',function(){
@@ -56,18 +57,24 @@ for(let i=0;i<p.length;i++){
         p[i].textContent='Add to Cart👜';
         p[i].style.backgroundColor='#ffff00'
        count--;
-       productdis[count].style.display='none'
+       let index=search(i)
+       productdis[index].style.display='none'
+       
        if(count==0){
          delcart[i].style.display='none';
         cartadded.style.gridTemplateColumns='100%'
-
        }
        let imgcont=cnt[i].textContent
         const innercontent=productdis[count].querySelector('.pr h4')
         innercontent.textContent=imgcont
         const sm=subtract(imgcont)
         summ.textContent=sm
-        totpri.textContent=sum+1500
+        if(sm==0){
+            totpri.textContent=0
+        }
+        else{
+            totpri.textContent=sum+1500
+        }
      })
 
      clear.addEventListener('click',function(){
@@ -83,6 +90,13 @@ for(let i=0;i<p.length;i++){
     })
 }
 
+function search(i){
+    for (let index = 0; index < arr.length; index++) {
+        if(arr[index]==i){
+            return index;
+        }
+    }
+}
 function add(imgcont){
     let str=imgcont
     let lastFiveChars = Number(str.slice(-5));
