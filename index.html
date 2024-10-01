@@ -10,7 +10,20 @@
  </head>
                       <!-- Body -->
  <body id="home">
+    <div class="login">
+        <h2 class="disname"></h2>
+        <div class="login-form">
+            <h2 >Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" class="username" name="username" required placeholder="Username">         
+                <input type="password" id="password" class="password" name="password" required placeholder="Password">
+                <button type="submit" class="sub">Login</button>
+            </form>
+        </div>
+        <h1 class="errordis">Details not found. Type: rahul as username and rahul@2024 as password</h1>
+    </div>
                 <!-- Header -->
+    <div class="container">
     <header style="width:100vw;">
         <nav>
            <div class="navbar">
@@ -46,14 +59,14 @@
       <p id="products" class="dfs"style=" width=100vw;">New Arrivals</p>
       <section class="newarrival"style=" width=100vw;">
         <br>
-        <a href="products.html">   <img src="products/pngegg (1).png"  style="  max-width: 100%; height: auto; align-self: center;" class="bfs"></a>
+        <a href="products.html">   <img src="products/pngegg (1).png" class="bfs"></a>
         <div class="dij"style=" width=100vw;">
             <data>X-Treme's-Double-Carrier </data>
             <data>₹50000</data>
             <!-- <div style="display: flex;"><button class="prdd addedtocart">Add to Cart👜</button ><button class="delcart" style="background-color:black;" >🗑️</button></div> -->
         </div>
      </section>
-                <p  id="products"style=" width=100vw; Color:black; font-size: 30px; border: 1px solid white; text-align: center;padding:20px; background-color: blanchedalmond;"> Featured Products</p>
+                <p  style="  Color:black; font-size: 30px; border: 1px solid white; text-align: center;padding:20px; background-color: blanchedalmond;"> Featured Products</p>
     <section  id="products" class="products"style=" width=100vw;" >
                   <div class="prdpics">  <a href="products.html"><img src="/products/downtown_yellow_green 20000.png" width="280px" class="individuall" ><p> X-Treme-Downtown<br>₹20000</p></a></div>
                   <div class="prdpics">  <a href="products.html"><img src="/products/montera -blues-black  20222.png" width="280px" class="individuall"> <p>X-Treme-black<br>₹22000</p> </a>  </div>
@@ -133,7 +146,7 @@
                     <div class="info3">
                             <label for="contactMessage" >Message:</label>
                             <textarea class="form-control" id="contactMessage" rows="4" placeholder="Your message"></textarea>
-                           <button type="submit" style="color: black; align-self: center; margin-top: 20px; font-size:20px;" onclick="succes()">Submit</button>
+                           <button type="submit" style="color: black; align-self: center; margin-top: 20px; font-size:20px;" onclick="succes(e)">Submit</button>
                     </div>
                 </form>
      </section>
@@ -168,6 +181,8 @@
     </div>
         
 </footer>
-<script src="script.js"></script>
+    </div>
+    
+<script src="js/index.js"></script>
  </body>
  </html>
