@@ -54,7 +54,9 @@ logsubmit.addEventListener('click',function(e){
 
 function greetUser(username){
     disname.style.color='#9BEC00'
-    disname.textContent=`Hey, ${username.charAt(0).toUpperCase() + username.slice(1)}! Let’s ride like Wolverine on a mission!`
+    disname.textContent= `Welcome back, ${username.charAt(0).toUpperCase() + username.slice(1)}! Your next adventure awaits!`
     errordis.style.display=loginform.style.display='none';
 }
 displayStoredUsername();
+
+   
