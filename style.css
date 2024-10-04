@@ -1,3 +1,4 @@
+
 html,
 body {
   margin: 0;
@@ -19,10 +20,12 @@ body {
 .disname{
   margin:30px;
 }
+ 
 .login-form{
  margin:10px 50px;
  display: flex; 
  justify-content: space-between;
+  flex-wrap: wrap;
  align-items: center;
   color:whitesmoke;
 }
@@ -337,9 +340,7 @@ padding :20px ;}
     position: relative; 
     padding: 10px;
   }
-.whyus{
-  display: flex;
-}
+
 
  /*  contact us section */
 
