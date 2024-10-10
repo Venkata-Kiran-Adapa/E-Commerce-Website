@@ -18,6 +18,26 @@ let count=0
 let value=1
 let sum=0
  
+
+
+
+function displayStoredUsername() {
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+        const usernameValue = JSON.parse(storedUsername);
+        username.value = usernameValue;
+        greetUser(usernameValue); 
+    }
+}
+
+function greetUser(username){
+    disname.style.color='#9BEC00'
+    disname.textContent= `Welcome back, ${username.charAt(0).toUpperCase() + username.slice(1)} ! Your next adventure awaits!`
+    errordis.style.display=loginform.style.display='none';
+}
+displayStoredUsername();
+
+
 for(let i=0;i<productlist.length;i++){
 
     // Add to cart button

@@ -7,8 +7,12 @@ let password=document.querySelector('.password')
 let disname=document.querySelector('.disname')
 let errordis=document.querySelector('.errordis')
 let loginform=document.querySelector('.login-form')
+let menu=document.querySelector('.burger-menu')
+let navbar=document.querySelector('.navbar ul');
 let check=0
+let menuu=0
 let arrrr=[]
+
 function displayStoredUsername() {
     const storedUsername = localStorage.getItem('username');
     if (storedUsername) {
@@ -37,24 +41,37 @@ logsubmit.addEventListener('click',function(e){
       username.value=password.value='';
       username.blur();
       password.blur();
-      check=-1;
-      
-    
+      check=-1;   
   }
   else{
       if(!(check===-1)) {
           errordis.style.display='block';
+          errordis.style.color='red';
+          errordis.style.textAlign='center';
       }
         }}
   })
   
-  function succes(e){
+ menu.addEventListener('click',function(){
+    if(menuu===0) {
+        navbar.style.display='flex';
+        menuu++;
+    }
+    else{
+        navbar.style.display='none';
+        menuu=0;
+    }
+ })
+
+
+
+function succes(e){
        alert('Details submitted successfully')
 }
 
 function greetUser(username){
     disname.style.color='#9BEC00'
-    disname.textContent= `Welcome back, ${username.charAt(0).toUpperCase() + username.slice(1)}! Your next adventure awaits!`
+    disname.textContent= `Welcome back, ${username.charAt(0).toUpperCase() + username.slice(1)} ! Your next adventure awaits!`
     errordis.style.display=loginform.style.display='none';
 }
 displayStoredUsername();
