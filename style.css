@@ -538,7 +538,7 @@ a {
     font-size:medium;
   }
    .individual{
-      width:160px;
+      width:140px;
     }
     .cartitems,.cartsum{
       font-size: smaller;
@@ -553,12 +553,12 @@ a {
   
     }
    .text-overlay {
-      font-size: larger;
+      font-size:smaller;
       padding: 200px 0px 50px 0px;
     }
   
     .textoverlaymatter {
-      font-size: medium;
+      font-size: smaller;
       padding: 100px 0px;
     }
   
@@ -703,6 +703,7 @@ a {
     width:150px
 }
 }
+
 @media  (min-width:800px) and (max-width:1311px){
 .individual,.individuall{
   width:270px;
@@ -713,32 +714,7 @@ a {
   margin:10px
 }
 }
-@media  (min-width:800px) and (max-width:1024px){
-  @keyframes wheel {
-    0% {
-      transform: translateX(0);
-    }
-  
-    33% {
-      transform: translateX(15px) rotate(180deg);
-    }
-  
-    66% {
-      transform: translateX(-15px) rotate(-180deg);
-    }
-  
-    100% {
-      transform: translateX(0);
-    }
-  }
-  .individual{
-    width:230px
-  }
-  .cicss,.pr{
-    width:200px;
-    margin:10px
-  }
-  }
+
 
 @media (min-width:426px) and (max-width:760px) {
   .navbar ul{ padding: 0;}
